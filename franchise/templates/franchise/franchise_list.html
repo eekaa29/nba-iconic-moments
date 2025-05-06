@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Franchises{% endblock %}
+{% block content %}
+    <main class="">
+        <h1 class="text-4xl mb-6">Franchises</h1>
+        {% for franchise in object_list %}
+            <div class="flex items-center space-x-12 gap-4 mb-8">
+                <img src="{{franchise.img.url}}" alt="Logo" class="w-16 h-16 object-contain">
+                <div class="p-3 pl-6">
+                    <h2 class="mb-4">{{franchise.name}}</h2>
+                    <p>{{franchise.city}}</p>
+                    <p><a href="#">Leer más</a>
+                    {% comment %} {% if request.user.is_staff %}
+                        | <a href="{% url 'pages:update' page.id %}">Editar</a>
+                        | <a href="{% url 'pages:delete' page.id %}">Borrar</a>
+                    {% endif %} {% endcomment %}
+                    </p>
+                </div>
+            </div>       
+        {% endfor %}
+    </main>
+{% endblock %}
