@@ -3,21 +3,22 @@
 {% block title %}Franchises{% endblock %}
 {% block content %}
     <main class="">
-        <h1 class="text-4xl mb-6">Franchises</h1>
-        {% for franchise in object_list %}
-            <div class="flex items-center space-x-12 gap-4 mb-8">
-                <img src="{{franchise.img.url}}" alt="Logo" class="w-16 h-16 object-contain">
-                <div class="p-3 pl-6">
-                    <h2 class="mb-4">{{franchise.name}}</h2>
-                    <p>{{franchise.city}}</p>
-                    <p><a href="#">Leer más</a>
-                    {% comment %} {% if request.user.is_staff %}
-                        | <a href="{% url 'pages:update' page.id %}">Editar</a>
-                        | <a href="{% url 'pages:delete' page.id %}">Borrar</a>
-                    {% endif %} {% endcomment %}
-                    </p>
+        <div class=" mt-6 mb-10 flex flex-wrap gap-6 justify-center">
+            {% for franchise in object_list %}
+                <div class="flex justify-center max-w-64 p-2 m-auto mb-2 bg-white font-semibold rounded-xl shadow-lg/50 w-64 h-32 hover:bg-slate-100 ">
+                    <img src="{{franchise.img.url}}" alt="Logo" class=" mx-auto w-20 h-20 max-w-20 object-contain p-1">
+                    <div class="p-3 pl-4 ">
+                        <h2 class="text-xl font-mono text-black ">{{franchise.name}}</h2>
+                        <p class=" font-mono text-slate-400"></p>
+                        <p class="text-orange-600"><a href="{% url 'post_list' franchise.pk %}">Posts</a>
+                        {% comment %} {% if request.user.is_staff %}
+                            | <a href="{% url 'pages:update' page.id %}">Editar</a>
+                            | <a href="{% url 'pages:delete' page.id %}">Borrar</a>
+                        {% endif %} {% endcomment %}
+                        </p>
+                    </div>
                 </div>
-            </div>       
-        {% endfor %}
+            {% endfor %}
+         </div>
     </main>
 {% endblock %}

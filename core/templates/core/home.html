@@ -1,8 +1,11 @@
 {% extends 'core/base.html'%}
 {% block title %}Home{% endblock %}
+{% load static %}
 {% block content %}
-<div class="text-center justify-center p-3">
-    <h1 class="font-mono text-4xl pt-2">Welcome to the territory of NBA fans</h1>
-    <h2 class="font-mono text-2xl">Where you could find the most remarkable plays, buquets and histories of the best league in the world</h2>
+
+<div class="grid grid-cols-3 items-center  gap-3 p-6 text-balance tracking-tighter ">
+    <h1 class="font-mono text-4xl pt-2">Welcome to the NBA fans territory</h1>
+    <img class="rounded-2xl max-h-screen object-contain" src="{% static 'core/img/kobe-trophy.jpg' %}" alt="">
+    <h2 class="font-mono text-2xl">Where the most remarkable plays, buquets and histories of the best league in the world are gathered</h2>
 </div>
 {% endblock %}
