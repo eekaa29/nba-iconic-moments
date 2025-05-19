@@ -21,7 +21,7 @@ class Post(models.Model):
     img = models.ImageField(upload_to= "posts", verbose_name="Img", blank=True)
     link = models.URLField(verbose_name = "link", blank=True)
     author = models.ForeignKey(User, verbose_name="Author", on_delete=models.CASCADE)
-    categories = models.ManyToManyField(Category, verbose_name="Category", blank=True)#porque un post puede pertenecer a muchas categorías y viceversa
+    categories = models.ManyToManyField(Category, verbose_name="Categories", blank=True)#porque un post puede pertenecer a muchas categorías y viceversa
     created = models.DateTimeField(auto_now_add= True, verbose_name="Created")
     updated = models.DateField(auto_now=True, verbose_name= "Updated")
 

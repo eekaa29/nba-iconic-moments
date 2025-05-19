@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Success View{% endblock %}
+{% block content%}
+    <div class="m-45">
+        <form method="post">{% csrf_token %}
+            <p class="text-center pb-4 font-semibold text-2xl">Are you sure you want to delete "{{ object }}"?</p>
+            {{form}}
+            <div class="relative bg-red-600 p-6 rounded-lg hover:bg-red-700 overflow-hidden border-2 border-red-800 shadow-xl">
+                <input type="submit" value="CONFIRM" class=" absolute inset-0 z-10relative z-9 text-slate-200 font-bold text-center">
+            </div>
+        </form>
+    </div>
+
+{% endblock%}

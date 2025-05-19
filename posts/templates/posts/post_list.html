@@ -4,13 +4,16 @@
 {% block content %}
     <main class="">
             {% for post in object_list %}
-                <section class="bg-white dark:bg-gray-900">
+                <section class="bg-white dark:bg-gray-900 mb-4">
                     <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400 gap-3">
                             <h1 class="mb-4 text-6xl tracking-tight font-extrabold text-gray-900 dark:text-slate-400">{{post.franchise}}</h1>
                             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{{post.title}}</h2>
                             <p class="mb-4">{{post.description}}</p>
-                            <a class="mb-4 text-blue-300" href="{{post.link}}" target="_blank">See highlights</a>
+                            <a class="mb-4 text-blue-300" href="{{post.link}}" target="_blank">See highlights |</a>
+                            <a class="mb-4 text-blue-300" href="{% url 'post_edit' post.pk %}">Edit |</a>
+                            <a class="mb-4 text-blue-300" href="{% url 'delete_post' post.pk %}">Delete |</a>
+                            <a class="mb-4 text-blue-300" href="{% url 'create_post' franchise.pk %}">Create New Post</a>
                         </div>
                         <div class="">
                             <img class="w-full rounded-lg" src="{{post.img.url}}" alt="office content 1">
@@ -20,8 +23,9 @@
             {% empty %}
                 <section class="bg-white dark:bg-gray-900">
                     <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                            <p class="mb-4">Coming soon</p>
+                        <div class="flex gap-2 font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                            <p class="mb-4">{{franchise.name}} posts coming soon |</p>
+                            <a class="mb-4 text-blue-300" href="{% url 'create_post' franchise.pk %}">Create New Post</a>
                         </div>
                     </div>
                 </section>

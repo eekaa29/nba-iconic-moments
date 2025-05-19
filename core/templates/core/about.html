@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %}About{% endblock %}
 {% block content %}
-    <div class="flex items-center justify-center gap-3 mt-3 mb-16 font-mono text-xl ">
+    <div class="flex items-center justify-center gap-3 mt-3 mb-16  text-xl ">
         <img class="shadow-xl/50 max-w-48 max-h-48 rounded-xl" src="{% static 'core/img/Foto-Ekaitz.jpg' %}" alt="Foto Ekaitz">
         <div class="">
             <div class="flex max-w-48 text-wrap pb-3">
@@ -20,8 +20,8 @@
             <img class="h-12 w-12" src="{% static 'core/img/nba-trophy.png' %}" alt="nba-tropy">
         {% endfor %}
     </div>
-    <div class="flex items-center font-mono font-xl gap-32 p-6 ">
-        <div class="max-w-72 text-left">
+    <div class="flex items-center justify-center font-xl gap-32 p-6">
+        <div class="max-w-72 text-left mx-24">
             <p>Hi!, Ekaitz here.</p>
             <p class="pb-2">I have been an enthusiast of sports the entire of my life, but some years ago I started to watch and follow the NBA, as soon as I witnessed some amazing games and incredible players, 
                 I became more interested in the game. Therefore, my willingness of knowing more about the league increased. I have created this website to share with all of you a place that I wish
@@ -29,10 +29,8 @@
             </p>
             <p class="pb-2">Hope you enjoy!</p>
         </div>
-        <div class="grid grid-cols-3 gap-12">
-            <img class="mb-72 mask-linear-130 mask-linear-from-70% mask-linear-to-90% rounded-lg shadow-xl/50 md:w-60 h-44 object-contain" src="{% static 'core/img/LBJ&SC.jpg' %}" alt="LebronandCurry_img">
-            <img class="mt-72 mask-linear-300 mask-linear-from-70% mask-linear-to-90% rounded-lg shadow-xl/50 md:w-60 md:h-44 object-contain" src="{% static 'core/img/paris_game.jpg' %}" alt="LebronandCurry_img">
-            <img class="rounded-lg shadow-xl/70" src="{% static 'core/img/jaylen_brown.jpg' %}" alt="Jaylen_Brown">
+        <div class="">
+            <img class="max-h-72 rounded-lg shadow-xl/70 " src="{% static 'core/img/jaylen_brown.jpg' %}" alt="Jaylen_Brown">
         </div>
     </div>
 {% endblock %}

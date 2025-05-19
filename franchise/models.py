@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils.text import slugify
 # Create your models here.
 
 class Franchise(models.Model):
@@ -9,6 +9,7 @@ class Franchise(models.Model):
     link = models.URLField(null=True, blank=True, verbose_name="link")
     img = models.ImageField(upload_to="franchise", verbose_name="img", null=True)
 
+    
     class Meta:
         ordering = ["conference"]
 

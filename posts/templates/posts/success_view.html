@@ -1,0 +1,19 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Success View{% endblock %}
+{% block content%}
+    <div class="m-45">
+        <h1 class="text-center pb-4 font-semibold text-2xl">POST SUCCESSFULLY UPDATED</h1>
+        <div class="relative bg-green-100 p-6 rounded-lg hover:bg-green-200 overflow-hidden">
+            <!-- Enlace que cubre todo el contenedor -->
+            <a href="{% url 'post_list' pk %}" class="absolute inset-0 z-10"></a>
+
+            <!-- Contenido por encima del enlace -->
+            <p class="relative z-9 text-green-800 font-bold text-center">
+               SEE ALL POSTS
+            </p>
+        </div>
+    </div>
+    
+
+{% endblock%}
