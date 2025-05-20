@@ -9,6 +9,12 @@ module.exports = {
       '../posts/templates/posts/create_form.html',
       '../posts/templates/posts/post_confirm_delete.html',
       '../article/templates/article/latest_articles.html',
+      '../registration/templates/registration/login.html',
+      '../registration/templates/registration/signup.html',
+      '../registration/templates/registration/password_reset_form.html',
+      '../registration/templates/registration/password_reset_done.html',
+      '../registration/templates/registration/password_reset_confirm.html',
+      '../registration/templates/registration/password_reset_complete.html',
       '../franchise/templates/franchise/franchise_list.html',        // si tienes templates en theme/
     ],
     theme: {

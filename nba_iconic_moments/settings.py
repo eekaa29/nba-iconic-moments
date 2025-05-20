@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "registration",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -136,3 +137,17 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Auth REDIRECTION
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
+
+#Email backend
+
+''' Esto lo podría hacer con mailtrap como hice en la web empresarial, pero esta vez voy a guardar los mail en local como un archivo'''
+if DEBUG:
+    EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+    EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+else:
+    #Aquí iría la credenciales de mi email para cuando la web esté en producción
+    pass

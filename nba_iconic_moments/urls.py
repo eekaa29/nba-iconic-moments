@@ -26,6 +26,10 @@ urlpatterns = [
     path('franchise/', include("franchise.urls")),
     #Path article
     path('article/', include("article.urls")),
+    #Path Auth
+    path('accounts/', include("django.contrib.auth.urls")),
+    #Path Signup
+    path('accounts/', include("registration.urls")),
     #Path posts
     path('posts/', include("posts.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
