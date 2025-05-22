@@ -13,13 +13,15 @@
                             <a class="mb-4 text-blue-300" href="{{post.link}}" target="_blank">See highlights</a>
                             {% if request.user.is_staff %}
                                 <a class="mb-4 text-blue-300" href="{% url 'post_edit' post.pk %}">| Edit</a>
-                                <a class="mb-4 text-blue-300" href="{% url 'delete_post' post.pk %}">Delete |</a>
+                                <a class="mb-4 text-blue-300" href="{% url 'delete_post' post.pk %}">| Delete |</a>
                                 <a class="mb-4 text-blue-300" href="{% url 'create_post' franchise.pk %}">Create New Post</a>
                             {% endif %}
                         </div>
+                        {% if post.img %}
                         <div class="">
                             <img class="w-full rounded-lg" src="{{post.img.url}}" alt="office content 1">
                         </div>
+                        {% endif %}
                     </div>
                 </section>
             {% empty %}

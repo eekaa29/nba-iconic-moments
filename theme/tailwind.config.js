@@ -15,6 +15,7 @@ module.exports = {
       '../registration/templates/registration/password_reset_done.html',
       '../registration/templates/registration/password_reset_confirm.html',
       '../registration/templates/registration/password_reset_complete.html',
+      '../registration/templates/registration/profile_form.html',
       '../franchise/templates/franchise/franchise_list.html',        // si tienes templates en theme/
     ],
     theme: {
