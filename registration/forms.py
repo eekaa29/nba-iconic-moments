@@ -22,9 +22,9 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = ["avatar", "description", "link"]
         widgets = {
-            "avatar": forms.ClearableFileInput(attrs={"class": "bg-slate-100 rounded-sm p-1 border-2 border-black w-full mb-2"}),
-            "description": forms.Textarea(attrs={"class": "bg-slate-100 rounded-sm p-1 border-2 border-black w-full mb-2", "placeholder":"Description"}),
-            "link": forms.URLInput(attrs={"class": "bg-slate-100 rounded-sm p-1 border-2 border-black w-full mb-2", "placheholder" : "Link"})
+            "avatar": forms.ClearableFileInput(attrs={"class": "bg-slate-800 rounded-sm p-1 border-2 border-black w-full mb-2"}),
+            "description": forms.Textarea(attrs={"class": "bg-slate-800 rounded-sm p-1 border-2 border-black w-full mb-2", "placeholder":"Description"}),
+            "link": forms.URLInput(attrs={"class": "bg-slate-800 rounded-sm p-1 border-2 border-black w-full mb-2", "placheholder" : "Link"})
         }
 
 class EmailChangeForm(forms.ModelForm):

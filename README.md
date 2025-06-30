@@ -39,17 +39,23 @@ The **theme** app contains the **settings.json** file, which is the script where
 ## 🎨 Project Design
 
 ### Home
-<img src="readme/img/home.PNG" alt="Home">
+<img src="readme\img\2025-06-30 (3).png" alt="Home">
 
 ### Franchises
-<img src="readme/img/franchise_list.PNG" alt="Franchise List">
+<img src="readme\img\2025-06-30 (4).png" alt="Franchise List">
 
 ### Posts
-<img src="readme/img/lebron_post.PNG" alt="Post - Cavaliers">
-<img src="readme/img/post_jordan.PNG" alt="Post - Jordan">
+<img src="readme\img\2025-06-30 (9).png" alt="Post - Cavaliers">
+<img src="readme\img\2025-06-30 (6).png" alt="Post - Jordan">
+
+### Articles 
+<img src="readme\img\2025-06-30 (5).png" alt="Articles">
 
 ### Profile
-<img src="readme/img/profile.PNG" alt="Profile">
+<img src="readme\img\2025-06-30 (12).png" alt="Profile">
+
+### Login
+<img src="readme\img\2025-06-30 (7).png" alt="Login">
 
 ## 🚀 How to Run the Project
 
@@ -103,18 +109,26 @@ En la app **theme** se encuentra **settings.json**, el script donde hay que aña
 
 ## Estética del Proyecto
 
+## 🎨 Project Design
+
 ### Home
-<img src="readme\img\home.PNG" alt="Home">
+<img src="readme\img\2025-06-30 (3).png" alt="Home">
 
 ### Franchises
-<img src="readme\img\franchise_list.PNG" alt="Franchise_list">
+<img src="readme\img\2025-06-30 (4).png" alt="Franchise List">
 
 ### Posts
-<img src="readme\img\lebron_post.PNG" alt="Post-Cavaliers">
-<img src="readme\img\post_jordan.PNG" alt="Jordan-Post">
+<img src="readme\img\2025-06-30 (9).png" alt="Post - Cavaliers">
+<img src="readme\img\2025-06-30 (6).png" alt="Post - Jordan">
+
+### Articles 
+<img src="readme\img\2025-06-30 (5).png" alt="Articles">
 
 ### Profile
-<img src="readme\img\profile.PNG" alt="Profile">
+<img src="readme\img\2025-06-30 (12).png" alt="Profile">
+
+### Login
+<img src="readme\img\2025-06-30 (7).png" alt="Login">
 
 ## ¿Cómo ejecutar el proyecto?
 
