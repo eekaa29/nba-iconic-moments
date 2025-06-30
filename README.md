@@ -1,6 +1,6 @@
 **English**
 
-# 🏀 NBA Iconic Project
+# 🏀 NBA Iconic Moments
 
 The main idea of this project is to gather the most iconic and memorable moments in NBA history. Each story, moment, or event is presented in a specific post, organized by franchise and by the conference to which each franchise belongs (for now, posts are only available for the Lakers, Bulls, Warriors, Spurs, and Cavaliers franchises. More will be added over time). 
 
