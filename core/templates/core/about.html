@@ -2,33 +2,27 @@
 {% load static %}
 {% block title %}About{% endblock %}
 {% block content %}
-    <div class="flex items-center justify-center gap-3 mt-3 mb-16  text-xl ">
-        <img class="shadow-xl/50 max-w-48 max-h-48 rounded-xl" src="{% static 'core/img/Foto-Ekaitz.jpg' %}" alt="Foto Ekaitz">
-        <div class="">
-            <div class="flex max-w-48 text-wrap pb-3">
-                <img class="w-6 h-6" src="{% static 'core/img/basketball.png' %}" alt="Basketball">
-                <h1>Ekaitz Martin</h1>
+<div class="flex flex-col justify-center items-center min-h-screen">
+    <div class="flex flex-col justify-start items-start gap-5 mt-3 m-4 p-5 bg-slate-800 text-zinc-50 rounded-xl md:max-w-100">
+        <div class="flex gap-4 ">
+            <img class="max-w-10 max-h-10 rounded-full" src="{% static 'core/img/Foto-Ekaitz.jpg' %}" alt="Foto Ekaitz">
+            <div class="flex flex-col gap-2">
+                <h1 class="text-emerald-400 font-bold">Ekaitz Martin</h1>
+                <h2 class="font-osw">Software Developer & Creator of Iconic Buquets</h2>
             </div>
-            <div class=" flex max-w-48 text-wrap">
-                <img class="w-6 h-6" src="{% static 'core/img/basketball.png' %}" alt="Basketball">
-                <h2 class="">Software Developer & Creator of Iconic Buquets</h2>
-            </div>
+        
         </div>
-    </div>
-    <div class="flex items-center justify-center">
-        {% for i in rango %}
-            <img class="h-12 w-12" src="{% static 'core/img/nba-trophy.png' %}" alt="nba-tropy">
-        {% endfor %}
-    </div>
-    <div class="flex items-center justify-center font-xl gap-32 p-6">
-        <div class="max-w-72 text-left mx-24">
+        
+        <div class="">
             <p>Hi!, Ekaitz here.</p>
-            <p class="pb-2">I’ve been a sports enthusiast my entire life, but a few years ago, I started watching and following the NBA. After witnessing some amazing games and incredible players, I became more and more interested in the game. My desire to learn more about the league kept growing. That’s why I created this website — to share with all of you the kind of place I wish I had when I first started enjoying the game: a space that brings together some of the most iconic moments in NBA history.
+            <p class="pb-2 font-osw">I’ve been a sports enthusiast my entire life, but a few years ago, I started watching and following the NBA. 
+                After witnessing some amazing games and incredible players, I became more and more interested in the game. My desire to 
+                learn more about the league kept growing. That’s why I created this website — to share with all of you the kind of place 
+                I wish I had when I first started enjoying the game: a space that brings together some of the most iconic moments in NBA history.
             </p>
             <p class="pb-2">Hope you enjoy!</p>
         </div>
-        <div class="">
-            <img class="max-h-72 rounded-lg shadow-xl/70 " src="{% static 'core/img/jaylen_brown.jpg' %}" alt="Jaylen_Brown">
-        </div>
     </div>
+</div>
+    
 {% endblock %}

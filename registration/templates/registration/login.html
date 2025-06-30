@@ -10,17 +10,17 @@
                 <p class="text-green-400 mb-2 text-xl">Sign up successfully done</p>
             {% endif %}
             <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" 
-            maxlength="150" required="" id="id_username" placeholder="Username" class="border-2 border-black rounded-sm w-full mb-4 p-2">
+            maxlength="150" required="" id="id_username" placeholder="Username" class="border-2 border-white rounded-sm w-full mb-4 p-2">
             <input type="password" name="password" autocomplete="current-password" 
-            required="" id="id_password" placeholder="Password" class="border-2 border-black rounded-sm w-full mb-4 p-2">
-            <button action="submit" value="Submit" class="border-2 border-blue-700 rounded-sm w-full bg-blue-600 hover:bg-blue-700 hover:boder-blue-800 text-white font-bold p-2 transition transform duration-150 ease-in-out active:scale-95">Enter</button>
+            required="" id="id_password" placeholder="Password" class="border-2 border-white rounded-sm w-full mb-4 p-2">
+            <button action="submit" value="Submit" class=" text-xl border-2  rounded-sm w-full border-slate-700 bg-slate-800 hover:bg-slate-700 hover:border-slate-800 text-zinc-50 p-2 transition transform duration-150 ease-in-out active:scale-95">Enter</button>
             <p>Do you need to create an account?</p>
-            <div class="text-center justify-center bg-blue-600 border border-blue-700 hover:border-blue-800 hover:bg-blue-700 mt-2 p-1 w-full rounded-sm transition transform duration-150 ease-in-out active:scale-95">
-                <a class="block w-full h-full text-xl text-white" href="{% url 'signup' %}">SignUp</a>
+            <div class="text-center justify-center border-slate-700 bg-slate-800 hover:bg-slate-700 hover:border-slate-800 mt-2 p-1 w-full rounded-sm transition transform duration-150 ease-in-out active:scale-95">
+                <a class="block w-full h-full text-xl text-zinc-50" href="{% url 'signup' %}">Sign up</a>
             </div>
             <p class ="text-center mt-1">OR</p>
-            <div class="text-center justify-center bg-blue-600 border border-blue-700 hover:border-blue-800 hover:bg-blue-700 mt-2 p-1 w-full rounded-sm transition transform duration-150 ease-in-out active:scale-95">
-                <a class="block w-full h-full text-xl text-white" href="{% url 'password_reset' %}">Reset Your password</a>
+            <div class="text-center justify-center border-slate-700 bg-slate-800 hover:bg-slate-700 hover:border-slate-800 mt-2 p-1 w-full rounded-sm transition transform duration-150 ease-in-out active:scale-95">
+                <a class="block w-full h-full text-xl text-zinc-50" href="{% url 'password_reset' %}">Reset password</a>
             </div> 
         </div>
     </form>

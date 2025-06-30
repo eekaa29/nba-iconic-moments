@@ -3,9 +3,9 @@
 {% block title %}Articles{% endblock %}
 {% block content %}
     
-    <main class="bg-white">
-    <hr class="border border-gray-800">
-        <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <main class="bg-transparent">
+        <hr class="border border-gray-800">
+        <nav class="bg-transparent">
             <div class="max-w-screen-xl px-4 py-3 mx-auto">
             <h1 class="text-center font-bold text-3xl mb-2 text-white">NBA RELATED ARTICLES</h1>
                 <div class="flex items-center">
@@ -50,29 +50,27 @@
                 </div>
             </div>
         </nav> 
-        {% for article in articles %}
-            <section class="bg-white dark:bg-gray-900 rounded-2xl m-2">
-                <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                    <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                       <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-slate-400">{{article.title}}</h1>
-                        <div class="flex items-center justify-center gap-1">
+        <div class=" flex flex-col gap-3 m-3 md:grid md:grid-cols-2 lg:grid-cols-3">
+            {% for article in articles %}
+                <section class="flex flex-colum text-zinc-50 bg-slate-800 p-2 rounded-2xl">
+                    <div class="flex flex-col items-start gap-2 p-3">
+                        <h1 class="mb-4 text-4xl tracking-tight font-bold text-white">{{article.title}}</h1>
+                        <div class="flex gap-1 items-center">
                             <p class="mb-4 text-2xl"> Source {{article.source}} |</p>
-                            <a class="mb-4 text-blue-300 text-2xl" href="{{article.url}}" target="_blank">See the article</a>
+                            <a class="mb-4 text-emerald-400 hover:underline text-2xl italic" href="{{article.url}}" target="_blank">See the article</a>
                         </div>
                     </div>
-                    {% comment %} <div class="">
-                        <img class="w-full rounded-lg" src="{{post.img.url}}" alt="office content 1">
-                    </div> {% endcomment %}
-                </div>
-            </section>
-        {% empty %}
-            <section class="bg-white dark:bg-gray-900">
-                <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                    <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                        <p class="mb-4">{{franchise.name}} posts coming soon</p>
+                </section>
+            {% empty %}
+                <section class="bg-transparent">
+                    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                        <div class="font-light text-zinc-50 text-xl">
+                            <p class="mb-4">{{franchise.name}} There are not notices to show</p>
+                        </div>
                     </div>
-                </div>
-            </section>
-        {% endfor %}
+                </section>
+            {% endfor %}
+        </div>
+        
     </main>
 {% endblock %}

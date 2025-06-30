@@ -1,12 +1,12 @@
 {% extends "core/base.html" %}
 {% load static %}
-{% block title %}Success View{% endblock %}
+{% block title %}Confirm Delete{% endblock %}
 {% block content%}
-    <div class="m-45">
-        <form method="post">{% csrf_token %}
+    <div class="m-5 min-h-screen flex flex-col justify-center items-center  md:max-w-200s">
+        <form class="flex flex-col gap-3 justify-center items-center" method="post">{% csrf_token %}
             <p class="text-center pb-4 font-semibold text-2xl">Are you sure you want to delete "{{ object }}"?</p>
             {{form}}
-            <input type="submit" value="CONFIRM" class="text-white text-center justify-center bg-red-600 border border-red-700 hover:border-red-800 hover:bg-red-700 mt-2 p-1 w-full rounded-sm transition transform duration-150 ease-in-out active:scale-95">
+            <input type="submit" value="CONFIRM" class="text-white text-center justify-center border-slate-700 bg-slate-800 hover:bg-slate-700 hover:border-slate-800 mt-2 p-1 w-full rounded-sm transition transform duration-150 ease-in-out active:scale-95">
         </form>
     </div>
 
